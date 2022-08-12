@@ -1,4 +1,4 @@
-# Meal Planner Site
+# StoryBook  Site
 A responsive CRUD website to tell stories with autehntication
 
 **Link to project:** <a href=#>Under Construction</a>
