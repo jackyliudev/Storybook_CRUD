@@ -14,7 +14,7 @@ const StorySchema = new mongoose.Schema({
 
     status: {
         type: String,
-        required: 'public',
+        default: 'public',
         enum: ['public', 'private']
     },
     user: {
@@ -25,6 +25,11 @@ const StorySchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     }
+    /*
+    sessionID:{
+        type: String,
+        required: true,
+    }*/
 })
 
-module.exports = mongoose.model('Story', StorySchema);
+module.exports = mongoose.model('Stories', StorySchema);

@@ -17,7 +17,7 @@ const UserSchema = new mongoose.Schema({
     },
     lastName: {
         type: String,
-        required: true
+        default: '_'
     },
     image: {
         type: String
@@ -28,4 +28,4 @@ const UserSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Users', UserSchema);
+module.exports = mongoose.model('User', UserSchema);
