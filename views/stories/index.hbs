@@ -4,15 +4,17 @@
         <div class="col s12 m4">
             <div class="card">
                 <div class="card-image">
-                    {{!-- todo: editIcon --}}
+                    {{!-- the .. goes out of th each loop above--}}
+                    {{!-- triple braket indiates the html code needs to be parsed--}}
+                    {{{editIcon user ../user _id}}}
                 </div>
                 <div class="card-content center-align">
                     <h5>{{title}}</h5>
-                    <p>{{body}}</p>
+                    <p>{{stripTags (truncate body 25)}}</p>
                     <br>
                     <div class="chip">
                         <img src="{{user.image}}" alt="">
-                        <a href="/stories/user/{{user.id}}">{{user.displayName}}</a>
+                        <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
                     </div>
                 </div>
                 <div class="card-action center-align">
